@@ -19,13 +19,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %
-\usepackage[fntef]{ctex} % invole CJKfntef
 \usepackage{ctex}
 \usepackage{setspace} % spacing
 \usepackage{xcolor}   % color
 \usepackage{xltxtra}  % print a XeLaTeX
 
- 
+
 % Font family
 \setmainfont[Mapping=tex-text]{Times New Roman}
 
@@ -114,8 +113,8 @@
 % Bookmark  (Chinese bookmark supported)
 \usepackage{url}
 \def\UrlFont{}
-\usepackage[xetex, pdfstartview=FitH, 
-bookmarksnumbered=true, bookmarksopen=true, colorlinks=true, 
+\usepackage[xetex, pdfstartview=FitH,
+bookmarksnumbered=true, bookmarksopen=true, colorlinks=true,
 pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 % Deal with line breaking in url
 \makeatletter
@@ -142,7 +141,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 % \setlength{\itemsep}{-5pt} % item seperate too wide
 
 % Indentation
-%\usepackage{indentfirst} 
+%\usepackage{indentfirst}
 %\setlength{\parindent}{2em} % indent 2em
 
 % Footnote
@@ -157,11 +156,11 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 % Especially for stating which project the thesis is supported
 % Usage: \blfootnote{Your Text}
 \usepackage{lipsum}
-\newcommand\blfootnote[1]{% 
+\newcommand\blfootnote[1]{%
 \begingroup
-\renewcommand\thefootnote{}\footnote{#1}% 
-\addtocounter{footnote}{-1}% 
-\endgroup 
+\renewcommand\thefootnote{}\footnote{#1}%
+\addtocounter{footnote}{-1}%
+\endgroup
 }
 
 %%%%%% Detail style %%%%%%
@@ -273,7 +272,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 
 % table tweaking
 % New table environment
-% Usage: \begin{bupttable}{caption}{label} 
+% Usage: \begin{bupttable}{caption}{label}
 %            <normal table>
 %        \end{bupttable}
 \usepackage{array,booktabs,multirow} % multirow, multicolumn and more professional format support
@@ -304,29 +303,29 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \newtheorem{theorem}{定理}[chapter]
 \newtheorem{axiom}{公理}[chapter]
 \newtheorem{lemma}{引理}[chapter]
-\newtheorem{proposition}{命题}[chapter] 
+\newtheorem{proposition}{命题}[chapter]
 \newtheorem{corollary}{推论}[chapter]
 
 % Algorithm
-\usepackage{algorithm}  
-\usepackage{algorithmicx}  
+\usepackage{algorithm}
+\usepackage{algorithmicx}
 \usepackage{algpseudocode}
 
-% Code 
+% Code
 \usepackage{listings}
 \usepackage{xcolor}
 \lstset{
     basicstyle=\ttfamily\wuhao, %五号等宽字体
     extendedchars=true,
     keywordstyle=\color{blue},
-    commentstyle=\color{green!30!black}, 
+    commentstyle=\color{green!30!black},
     showspaces=false,          % 显示空格
     showstringspaces=true,    % 字符串中显示空格
     showtabs=false,            % 显示 TAB
     tabsize=2,                 % TAB 被当作两个空格
     captionpos=t,              % 标题位置
     breaklines=true,           % 自动断行
-    breakatwhitespace=true,   
+    breakatwhitespace=true,
     basewidth={0.5em,0.35em},
     frame=single,              %单线边框，注释掉则无边框
     numbers=left,               %行号位于左侧
