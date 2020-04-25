@@ -15,21 +15,21 @@
 
 % 封面
 \blankmatter
-\includepdf[pages=-]{docs/cover.pdf}  
+\includepdf[pages=-]{docs/cover.pdf}
 
 % 任务书
 \blankmatter
-\includepdf[pages=-]{docs/task.pdf}  
+\includepdf[pages=-]{docs/task.pdf}
 
 % 成绩评定表
 \blankmatter
-\includepdf[pages=-]{docs/scoreTable.pdf}  
+\includepdf[pages=-]{docs/scoreTable.pdf}
 
 % 诚信声明
 \blankmatter
-\includepdf[pages=-]{docs/statement.pdf} 
+\includepdf[pages=-]{docs/statement.pdf}
 
-\input{main.cfg}    % Main items 
+\input{main.cfg}    % Main items
 \include{abstract}  % Abstract
 \fancypagestyle{plain}{\pagestyle{frontmatter}}
 \frontmatter\tableofcontents % Content
@@ -205,21 +205,21 @@
 
 之后将求得的特征值降序排列，取前$d^\prime$个特征值对应的特征向量组成所需的投影矩阵$\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$，即可得到PCA的解。PCA算法的描述如算法\ref{PCA_algorithm}所示。
 
-\begin{algorithm} 
+\begin{algorithm}
 	\begin{spacing}{1.3}
 		\floatname{algorithm}{算法}
-		\caption{主成分分析（PCA）} 
+		\caption{主成分分析（PCA）}
 		\label{PCA_algorithm}
 		\renewcommand{\algorithmicrequire}{\textbf{输入：}}
-		\renewcommand{\algorithmicensure}{\textbf{输出：}} 
-		\begin{algorithmic}[1] 
-			\Require 样本集$\bm{x}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_i,\ldots,\bm{x}_m\}$，低维空间维数$d^\prime$ 
+		\renewcommand{\algorithmicensure}{\textbf{输出：}}
+		\begin{algorithmic}[1]
+			\Require 样本集$\bm{x}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_i,\ldots,\bm{x}_m\}$，低维空间维数$d^\prime$
 			\Ensure 投影矩阵  $\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$
 			\State 对所有样本中心化$\bm{x}_i \gets \bm{x}_i - \frac{1}{m}\sum_{i=1}^m \bm{x}_i$
 			\State  计算样本的协方差$\bm{X}\bm{X}^ \mathrm{T}$
 			\State 对协方差矩阵$\bm{X}\bm{X}^ \mathrm{T}$做特征值分解
 			\State 取最大的$d^\prime$个特征值所对应的特征向量$\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime}$
-		\end{algorithmic}  
+		\end{algorithmic}
 	\end{spacing}
 \end{algorithm}
 
@@ -229,11 +229,11 @@
 \begin{algorithm}
 	\begin{spacing}{1.3}
 		\floatname{algorithm}{算法}
-		\caption{基于PCA的信息可信度评估} 
+		\caption{基于PCA的信息可信度评估}
 		\label{PCA_model}
 		\renewcommand{\algorithmicrequire}{\textbf{输入：}}
-		\renewcommand{\algorithmicensure}{\textbf{输出：}} 
-			\begin{algorithmic}[1] 
+		\renewcommand{\algorithmicensure}{\textbf{输出：}}
+			\begin{algorithmic}[1]
 				\Require $\bm{f}^{c}_{0}$，$\bm{F}^{c}_{W}$，保留主成分数$n$
 				\Ensure 标签$label\in \{0,1\}$
 				\State 对所有特征向量应用PCA，保留前$n$个主成分$\bm{o}^{c}_{i} \gets PCA(\bm{f}^{c}_{i}, n)$（$i = 0,1,\ldots,k$）
@@ -256,10 +256,10 @@
 \subsection{直接书写代码在.tex中}
 下面的代码\ref{plus}是用Python编写的加法函数。
 
-\begin{lstlisting}[language=Python, caption=加法, label=plus, tabsize=2]  
+\begin{lstlisting}[language=Python, caption=加法, label=plus, tabsize=2]
 def plusFunc(a, b):
-	return a + b 
-\end{lstlisting}  
+	return a + b
+\end{lstlisting}
 
 \subsection{引用代码文件}
 下面的代码\ref{recursion}是用Python文件中引入的倒序打印$x$到$1$的函数，请查看code文件夹。
@@ -315,13 +315,13 @@ def plusFunc(a, b):
 \normalsize\thankwords
 
 % Appendix
-\setcounter{figure}{0} 
+\setcounter{figure}{0}
 \renewcommand{\thefigure}{~附-\arabic{figure}~}
-\setcounter{equation}{0} 
+\setcounter{equation}{0}
 \renewcommand{\theequation}{~附-\arabic{equation}~}
-\setcounter{table}{0} 
+\setcounter{table}{0}
 \renewcommand{\thetable}{~附-\arabic{table}~}
-\setcounter{lstlisting}{0} 
+\setcounter{lstlisting}{0}
 \makeatletter
   \renewcommand \thelstlisting
        {附-\@arabic\c@lstlisting}
@@ -364,10 +364,10 @@ def plusFunc(a, b):
 \end{bupttable}
 \buptfigure[width=0.15\textheight]{pictures/autoencoder}{自编码器结构}{autoencoder}
 
-\begin{lstlisting}[language=Python, caption=减法, label=minus, tabsize=2]  
+\begin{lstlisting}[language=Python, caption=减法, label=minus, tabsize=2]
 def minusFunc(a, b):
-	return a - b 
-\end{lstlisting}  
+	return a - b
+\end{lstlisting}
 
 \begin{equation}
 \label{PCA_goal}
@@ -480,12 +480,12 @@ def minusFunc(a, b):
 
 % 开题报告
 \blankmatter
-\includepdf[pages=-]{docs/openingReport.pdf} 
+\includepdf[pages=-]{docs/openingReport.pdf}
 
 
 % 中期检查表
 \blankmatter
-\includepdf[pages=-]{docs/interimReport.pdf} 
+\includepdf[pages=-]{docs/interimReport.pdf}
 
 
 \end{document}
